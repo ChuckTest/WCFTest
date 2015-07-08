@@ -7,21 +7,27 @@ using System.Text;
 
 namespace WcfServiceLibrary1
 {
-    // 注意: 使用“重构”菜单上的“重命名”命令，可以同时更改代码和配置文件中的接口名“IService1”。
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to 
+    // change the interface name "IService1" in both code and config file 
+    // together.
     [ServiceContract]
     public interface IService1
     {
         [OperationContract]
-        string GetData(int value);
+        int Sum(int numer1, int number2);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        int Substract(int number1, int number2);
 
-        // TODO: 在此添加您的服务操作
+        [OperationContract]
+        int Multiply(int number1, int number2);
+
+        [OperationContract]
+        int Divide(int number1, int number2);
     }
 
-    // 使用下面示例中说明的数据约定将复合类型添加到服务操作。
-    // 可以将 XSD 文件添加到项目中。在生成项目后，可以通过命名空间“WcfServiceLibrary1.ContractType”直接使用其中定义的数据类型。
+    // Use a data contract as illustrated in the sample below to add 
+    // composite types to service operations.
     [DataContract]
     public class CompositeType
     {

@@ -7,25 +7,69 @@ using System.Text;
 
 namespace WcfServiceLibrary1
 {
-    // 注意: 使用“重构”菜单上的“重命名”命令，可以同时更改代码和配置文件中的类名“Service1”。
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to 
+    // change the class name "Service1" in both code and config file 
+    // together.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        /// <summary>
+        /// This Function Returns summation of two integer numbers
+        /// </summary>
+        /// <param name="number1"></param>
+        /// <param name="number2"></param>
+        /// <returns></returns>
+        public int Sum(int number1, int number2)
         {
-            return string.Format("You entered: {0}", value);
+            return number1 + number2;
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        /// <summary>
+        /// This function returns subtraction of two numbers. 
+        /// If number1 is smaller than number2 then this function returns 0
+        /// </summary>
+        /// <param name="number1"></param>
+        /// <param name="number2"></param>
+        /// <returns></returns>
+        public int Substract(int number1, int number2)
         {
-            if (composite == null)
+            if (number1 > number2)
             {
-                throw new ArgumentNullException("composite");
+                return number1 - number2;
             }
-            if (composite.BoolValue)
+            else
             {
-                composite.StringValue += "Suffix";
+                return 0;
             }
-            return composite;
+        }
+
+        /// <summary>
+        /// This function returns multiplication of two integer numbers.
+        /// </summary>
+        /// <param name="number1"></param>
+        /// <param name="number2"></param>
+        /// <returns></returns>
+        public int Multiply(int number1, int number2)
+        {
+            return number1 * number2;
+        }
+
+        /// <summary>
+        /// This function returns integer value of two integer number. 
+        /// If num2 is 0 then this function returns 1
+        /// </summary>
+        /// <param name="number1"></param>
+        /// <param name="number2"></param>
+        /// <returns></returns>
+        public int Divide(int number1,int number2)
+        {
+            if (number2 != 0)
+            {
+                return number1 / number2;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }
