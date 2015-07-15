@@ -17,7 +17,7 @@ namespace Host
             //    Console.WriteLine("Press <ENTER> to terminate the service host");
             //    Console.ReadLine();
             //}
-            using (ServiceHost host = new ServiceHost(typeof(HelloIndigoService)))
+            using (ServiceHost host = new ServiceHost(typeof(HelloIndigo.HelloIndigoService)))
             {
                 host.Open();
                 Console.WriteLine("Press <ENTER> to terminate the host application");
