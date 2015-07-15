@@ -17,7 +17,7 @@ namespace Client
                 //IHelloIndigoService proxy = ChannelFactory<IHelloIndigoService>.CreateChannel(new BasicHttpBinding(), ep);
                 //string s = proxy.HelloIndigo();
 
-                localhost.HelloIndigoServiceClient proxy = new Client.localhost.HelloIndigoServiceClient();
+                HelloIndigoServiceClient proxy = new HelloIndigoServiceClient();
                 string s = proxy.HelloIndigo();
                 
                 Console.WriteLine(s);
