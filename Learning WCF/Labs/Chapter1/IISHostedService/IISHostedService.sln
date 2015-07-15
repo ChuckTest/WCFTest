@@ -5,6 +5,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloIndigo", "HelloIndigo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{36C77DA2-C5AC-421E-BF8F-85F48784407F}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IISHostedService", "http://localhost/IISHostedService", "{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.0"
+		ProjectReferences = "{61023f8c-87ec-4e61-8d20-5e229ffa7f7a}|HelloIndigo.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/IISHostedService"
+		Debug.AspNetCompiler.PhysicalPath = "IISHostedService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\IISHostedService\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/IISHostedService"
+		Release.AspNetCompiler.PhysicalPath = "IISHostedService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\IISHostedService\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "IISHostedService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +42,10 @@ Global
 		{36C77DA2-C5AC-421E-BF8F-85F48784407F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36C77DA2-C5AC-421E-BF8F-85F48784407F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36C77DA2-C5AC-421E-BF8F-85F48784407F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
