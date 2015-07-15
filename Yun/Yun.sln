@@ -5,11 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YunLib", "YunLib\YunLib.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YunHost", "YunHost\YunHost.csproj", "{5B0FEBAB-6D09-4DD3-9E35-B8C9553F70A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YunClient", "YunClient\YunClient.csproj", "{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "F:\Software\ZBMYun\SourceCode\YunServerDBManager\DAO\DAO.csproj", "{F5E3CC3E-7A3A-4A6D-8D72-486BEB01C4E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "F:\Software\ZBMYun\SourceCode\ZITaker\Log\Log.csproj", "{0392085E-9F4F-406E-87E3-746A3BC1F140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YunClient", "YunClient\YunClient.csproj", "{4976FDF4-9616-4672-91FD-C027FA94BB1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "..\..\..\..\Software\ZBMYun\SourceCode\YunServerDBManager\Utility\Utility.csproj", "{016D7C4E-62C6-42B0-B8BF-25ED1F5686C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,12 +32,6 @@ Global
 		{5B0FEBAB-6D09-4DD3-9E35-B8C9553F70A4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5B0FEBAB-6D09-4DD3-9E35-B8C9553F70A4}.x86|Any CPU.ActiveCfg = Release|Any CPU
 		{5B0FEBAB-6D09-4DD3-9E35-B8C9553F70A4}.x86|Any CPU.Build.0 = Release|Any CPU
-		{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}.x86|Any CPU.ActiveCfg = Release|Any CPU
-		{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}.x86|Any CPU.Build.0 = Release|Any CPU
 		{F5E3CC3E-7A3A-4A6D-8D72-486BEB01C4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5E3CC3E-7A3A-4A6D-8D72-486BEB01C4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5E3CC3E-7A3A-4A6D-8D72-486BEB01C4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,6 +44,18 @@ Global
 		{0392085E-9F4F-406E-87E3-746A3BC1F140}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0392085E-9F4F-406E-87E3-746A3BC1F140}.x86|Any CPU.ActiveCfg = x86|Any CPU
 		{0392085E-9F4F-406E-87E3-746A3BC1F140}.x86|Any CPU.Build.0 = x86|Any CPU
+		{4976FDF4-9616-4672-91FD-C027FA94BB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4976FDF4-9616-4672-91FD-C027FA94BB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4976FDF4-9616-4672-91FD-C027FA94BB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4976FDF4-9616-4672-91FD-C027FA94BB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4976FDF4-9616-4672-91FD-C027FA94BB1F}.x86|Any CPU.ActiveCfg = Release|Any CPU
+		{4976FDF4-9616-4672-91FD-C027FA94BB1F}.x86|Any CPU.Build.0 = Release|Any CPU
+		{016D7C4E-62C6-42B0-B8BF-25ED1F5686C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{016D7C4E-62C6-42B0-B8BF-25ED1F5686C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{016D7C4E-62C6-42B0-B8BF-25ED1F5686C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{016D7C4E-62C6-42B0-B8BF-25ED1F5686C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{016D7C4E-62C6-42B0-B8BF-25ED1F5686C6}.x86|Any CPU.ActiveCfg = Release|Any CPU
+		{016D7C4E-62C6-42B0-B8BF-25ED1F5686C6}.x86|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

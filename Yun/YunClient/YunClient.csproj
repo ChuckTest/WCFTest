@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BE7C8ED-2CAE-4EBF-891C-4FDE5F8D8CAC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{4976FDF4-9616-4672-91FD-C027FA94BB1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>YunClient</RootNamespace>
     <AssemblyName>YunClient</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,50 +38,87 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\YunServiceReference\Reference.cs">
+    <Compile Include="Service References\localhost\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\localhost\Service.wsdl" />
+    <None Include="Service References\localhost\Yun.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\localhost\Yun1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\localhost\Yun2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
-    <None Include="Service References\YunServiceReference\Service.wsdl" />
-    <None Include="Service References\YunServiceReference\Yun.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\YunServiceReference\Yun1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\YunServiceReference\Yun2.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <ProjectReference Include="..\..\..\..\..\Software\ZBMYun\SourceCode\YunServerDBManager\Utility\Utility.csproj">
+      <Project>{016d7c4e-62c6-42b0-b8bf-25ed1f5686c6}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\Software\ZBMYun\SourceCode\ZITaker\Log\Log.csproj">
+      <Project>{0392085e-9f4f-406e-87e3-746a3bc1f140}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\YunServiceReference\" />
+    <WCFMetadataStorage Include="Service References\localhost\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\YunServiceReference\Yun.disco" />
+    <None Include="Service References\localhost\Yun.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\YunServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\localhost\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\YunServiceReference\configuration.svcinfo" />
+    <None Include="Service References\localhost\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\YunServiceReference\Reference.svcmap">
+    <None Include="Service References\localhost\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
