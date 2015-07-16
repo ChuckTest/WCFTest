@@ -8,6 +8,9 @@ namespace Client
     {
         static void Main(string[] args)
         {
+            HelloIndigoServiceClient proxy = new HelloIndigoServiceClient();
+            string s = proxy.HelloIndigo();
+            Console.WriteLine(s);
             Console.WriteLine("Press <ENTER> to terminate Client.");
             Console.ReadLine();
         }
