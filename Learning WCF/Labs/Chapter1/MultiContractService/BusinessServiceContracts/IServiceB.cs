@@ -6,7 +6,7 @@ using System.ServiceModel;
 namespace BusinessServiceContracts
 {
     [ServiceContract(Namespace = "http://www.thatindigogirl.com/samples/2006/06")]
-    class IServiceB
+    public interface IServiceB
     {
         [OperationContract]
         string Operation3();

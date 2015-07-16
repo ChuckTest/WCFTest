@@ -39,6 +39,12 @@
     <Compile Include="ServiceA.cs" />
     <Compile Include="ServiceB.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessServiceContracts\BusinessServiceContracts.csproj">
+      <Project>{df32665a-50b8-4ebf-a093-fe9565acdc71}</Project>
+      <Name>BusinessServiceContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
