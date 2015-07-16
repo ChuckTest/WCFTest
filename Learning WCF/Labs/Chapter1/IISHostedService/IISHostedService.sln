@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloIndigo", "HelloIndigo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{36C77DA2-C5AC-421E-BF8F-85F48784407F}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IISHostedService", "http://localhost/IISHostedService", "{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IISHostedService", "http://localhost/IISHostedService", "{490F0187-E9CC-47B3-ACF5-9DBCF7705F10}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.0"
@@ -42,10 +42,10 @@ Global
 		{36C77DA2-C5AC-421E-BF8F-85F48784407F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36C77DA2-C5AC-421E-BF8F-85F48784407F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36C77DA2-C5AC-421E-BF8F-85F48784407F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C69DF15-D8C0-4954-9955-1D9B7C371ECE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{490F0187-E9CC-47B3-ACF5-9DBCF7705F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490F0187-E9CC-47B3-ACF5-9DBCF7705F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490F0187-E9CC-47B3-ACF5-9DBCF7705F10}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{490F0187-E9CC-47B3-ACF5-9DBCF7705F10}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
