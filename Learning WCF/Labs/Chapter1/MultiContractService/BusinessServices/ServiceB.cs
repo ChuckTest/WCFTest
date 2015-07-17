@@ -14,12 +14,12 @@ namespace BusinessServices
 
         public string AdminOperation1()
         {
-            return "IAdmin.AdminOperation1 invoked.";
+            return "ServiceB IAdmin.AdminOperation1 invoked.";
         }
 
         public string AdminOperation2()
         {
-            return "IAdmin.AdminOperation2 invoked.";
+            return "ServiceB IAdmin.AdminOperation2 invoked.";
         }
     }
 }

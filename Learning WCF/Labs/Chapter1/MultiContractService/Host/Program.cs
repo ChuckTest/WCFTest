@@ -35,13 +35,12 @@ namespace Host
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }
-            finally
-            {
                 CloseHost(hostA);
                 CloseHost(hostB);
             }
             Console.ReadLine();
+            CloseHost(hostA);
+            CloseHost(hostB);
         }
 
         static void CloseHost(ServiceHost host)
