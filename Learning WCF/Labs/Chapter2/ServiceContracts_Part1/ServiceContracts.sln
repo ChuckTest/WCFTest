@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessServices", "Busines
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{5DAB7455-D647-485F-9D7E-BA3A822193CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinClient", "WinClient\WinClient.csproj", "{611801E2-5CD5-41C5-9C8D-082DD8EBB101}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{5DAB7455-D647-485F-9D7E-BA3A822193CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DAB7455-D647-485F-9D7E-BA3A822193CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DAB7455-D647-485F-9D7E-BA3A822193CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{611801E2-5CD5-41C5-9C8D-082DD8EBB101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611801E2-5CD5-41C5-9C8D-082DD8EBB101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611801E2-5CD5-41C5-9C8D-082DD8EBB101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611801E2-5CD5-41C5-9C8D-082DD8EBB101}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
