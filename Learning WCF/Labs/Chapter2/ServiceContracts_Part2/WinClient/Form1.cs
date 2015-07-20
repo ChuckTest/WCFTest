@@ -11,7 +11,7 @@ namespace WinClient
 {
     public partial class Form1 : Form
     {
-        ServiceAClient proxy = new ServiceAClient();
+        ServiceAContractClient proxy = new ServiceAContractClient();
         string message = string.Empty;
 
         public Form1()
