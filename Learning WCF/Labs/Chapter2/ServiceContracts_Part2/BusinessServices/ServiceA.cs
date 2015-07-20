@@ -15,5 +15,10 @@ namespace BusinessServices
         {
             return "IServiceA.Operation2() invoked.";
         }
+
+        public string NewOperation(string s)
+        {
+            return string.Format("IServiceA.NewOperation( ) invoked with {0}", s);
+        }
     }
 }

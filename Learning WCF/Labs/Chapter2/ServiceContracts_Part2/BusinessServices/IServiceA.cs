@@ -12,5 +12,8 @@ namespace BusinessServices
         string Operation1();
         [OperationContract]
         string Operation2();
+
+        [OperationContract]
+        string NewOperation([MessageParameter(Name = "string")]string s);
     }
 }
