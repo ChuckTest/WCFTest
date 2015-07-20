@@ -5,7 +5,7 @@ using System.ServiceModel;
 
 namespace BusinessServices
 {
-    [ServiceContract]
+    [ServiceContract(Name = "ServiceAContract",Namespace = "http://www.thatindigogirl.com/samples/2006/06")]
     public interface IServiceA
     {
         [OperationContract]

@@ -3,14 +3,14 @@
 
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "WinClient.localhost.IServiceA")]
+    [System.ServiceModel.ServiceContractAttribute(Name = "ServiceAContract", Namespace = "http://www.thatindigogirl.com/samples/2006/06", ConfigurationName = "WinClient.localhost.IServiceA")]
     public interface IServiceA
     {
 
-        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceA/Operation1", ReplyAction = "http://tempuri.org/IServiceA/Operation1Response")]
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.thatindigogirl.com/samples/2006/06/ServiceAContract/Operation1", ReplyAction = "http://www.thatindigogirl.com/samples/2006/06/ServiceAContract/Operation1Response")]
         string Operation1();
 
-        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceA/Operation2", ReplyAction = "http://tempuri.org/IServiceA/Operation2Response")]
+        [System.ServiceModel.OperationContractAttribute(Action = "http://www.thatindigogirl.com/samples/2006/06/ServiceAContract/Operation2", ReplyAction = "http://www.thatindigogirl.com/samples/2006/06/ServiceAContract/Operation2Response")]
         string Operation2();
     }
 
