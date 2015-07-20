@@ -9,9 +9,10 @@ namespace BusinessServices
     public interface IServiceA
     {
         [OperationContract]
-        string Operation1();
-        [OperationContract]
-        string Operation2();
+        string Operation1(DateTime datetime);
+
+        //[OperationContract]
+        //string Operation2();
 
         [OperationContract]
         string NewOperation([MessageParameter(Name = "string")]string s);

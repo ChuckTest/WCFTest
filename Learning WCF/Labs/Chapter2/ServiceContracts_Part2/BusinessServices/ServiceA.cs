@@ -6,9 +6,9 @@ namespace BusinessServices
 {
     public class ServiceA : IServiceA
     {
-        public string Operation1()
+        public string Operation1(DateTime datetime)
         {
-            return "IServiceA.Operation1() invoked.";
+            return string.Format("IServiceA.Operation1( ) invoked at {0}.", datetime);
         }
 
         public string Operation2()
