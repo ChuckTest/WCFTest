@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BusinessServices
 {
-    public class ServiceA : IServiceA
+    public class ServiceA : IServiceA2
     {
         public string Operation1()
         {
@@ -14,6 +14,11 @@ namespace BusinessServices
         public string Operation2()
         {
             return "IServiceA.Operation2() invoked.";
+        }
+
+        public string Operation3()
+        {
+            return "IServiceA.Operation3() invoked.";
         }
     }
 }
