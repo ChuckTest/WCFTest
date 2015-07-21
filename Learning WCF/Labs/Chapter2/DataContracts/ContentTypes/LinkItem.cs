@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.Serialization;
 
 namespace ContentTypes
 {
+    [DataContract]
     public class LinkItem
     {
+        [DataMember]
         private long id;
         public long ID
         {
@@ -13,6 +16,7 @@ namespace ContentTypes
             set { id = value; }
         }
 
+        [DataMember]
         private string title;
         public string Title
         {
@@ -20,6 +24,7 @@ namespace ContentTypes
             set { title = value; }
         }
 
+        [DataMember]
         private string description;
         public string Description
         {
@@ -27,6 +32,7 @@ namespace ContentTypes
             set { description = value; }
         }
 
+        [DataMember]
         private DateTime dateStart;
         public DateTime DateStart
         {
@@ -34,6 +40,7 @@ namespace ContentTypes
             set { dateStart = value; }
         }
 
+        [DataMember]
         private DateTime dateEnd;
         public DateTime DateEnd
         {
@@ -41,6 +48,7 @@ namespace ContentTypes
             set { dateEnd = value; }
         }
 
+        [DataMember]
         private string url;
         public string Url
         {
