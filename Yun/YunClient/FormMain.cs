@@ -17,41 +17,18 @@ namespace YunClient
         public FormMain()
         {
             InitializeComponent();
-            ZBMDataGridView.Config(dataGridViewProject);
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void buttonUserToProject_Click(object sender, EventArgs e)
         {
             try
             {
-                string userName = textBoxUserName.Text.Trim();
-                if (userName.Equals(string.Empty))
-                {
-                    ZBMMessageBox.ShowInfo("请输入用户名");
-                    return;
-                }
-                ServiceClient client = new ServiceClient();
-                DataTable dataTable = client.SelectProjectByUser(userName);
-                if (dataTable != null)
-                {
-                    if (dataTable.Rows.Count > 0)
-                    {
-                        dataGridViewProject.DataSource = dataTable;
-                    }
-                    else
-                    {
-                        ZBMMessageBox.ShowInfo("此用户名下不存在项目");
-                    }
-                }
-                else
-                {
-                    ZBMMessageBox.ShowInfo("查找失败");
-                }
+                FormUserToProject form = new FormUserToProject();
+                form.ShowDialog();
             }
             catch (Exception ex)
             {
                 ExceptionLog.Instance.WriteLog(ex, LogType.UI);
-                ZBMMessageBox.ShowError(ex);
             }
         }
     }
