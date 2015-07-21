@@ -20,6 +20,15 @@ namespace Host
                 Console.WriteLine(item.Address);
             }
 
+            ServiceHost host2 = new ServiceHost(typeof(ServiceA2));
+            host2.Open();
+
+            endpoints = host2.Description.Endpoints;
+            foreach (ServiceEndpoint item in endpoints)
+            {
+                Console.WriteLine(item.Address);
+            }
+
             Console.WriteLine();
             Console.WriteLine("Please press Enter to terminate the Host");
             Console.ReadLine();
