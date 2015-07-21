@@ -54,6 +54,7 @@
             this.cmdGet.TabIndex = 11;
             this.cmdGet.Text = "&Get";
             this.cmdGet.UseVisualStyleBackColor = true;
+            this.cmdGet.Click += new System.EventHandler(this.cmdGet_Click);
             // 
             // cmdSave
             // 
@@ -63,6 +64,7 @@
             this.cmdSave.TabIndex = 10;
             this.cmdSave.Text = "&Save";
             this.cmdSave.UseVisualStyleBackColor = true;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
             // layoutEventInput
             // 
@@ -94,7 +96,7 @@
             this.layoutEventInput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.4375F));
             this.layoutEventInput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.441718F));
             this.layoutEventInput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.66258F));
-            this.layoutEventInput.Size = new System.Drawing.Size(337, 278);
+            this.layoutEventInput.Size = new System.Drawing.Size(336, 278);
             this.layoutEventInput.TabIndex = 12;
             // 
             // lblUrl

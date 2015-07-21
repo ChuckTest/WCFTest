@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.thatindigogirl.com/samples/2006/06" elementFormDefault="qualified" targetNamespace="http://www.thatindigogirl.com/samples/2006/06" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SaveGig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="item" nillable="true" type="tns:LinkItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="LinkItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element name="Title" nillable="true" type="xs:string" />
+      <xs:element name="Description" nillable="true" type="xs:string" />
+      <xs:element name="DateStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateEnd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinkItem" nillable="true" type="tns:LinkItem" />
+  <xs:element name="SaveGigResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGig">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGigResult" nillable="true" type="tns:LinkItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
