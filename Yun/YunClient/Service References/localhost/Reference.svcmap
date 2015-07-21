@@ -21,11 +21,11 @@
     <MetadataSource Address="http://192.168.1.18:8000/Yun" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="f3321527-d95e-470f-ba7d-54c4783b4a2e" SourceId="1" SourceUrl="http://192.168.1.18:8000/Yun?wsdl" />
-    <MetadataFile FileName="Yun.disco" MetadataType="Disco" ID="00885b4a-8b99-4c8a-b766-2b565dc6b3a5" SourceId="1" SourceUrl="http://192.168.1.18:8000/Yun?disco" />
-    <MetadataFile FileName="Yun.xsd" MetadataType="Schema" ID="72c57b14-aa1c-4662-9152-bbc0f7d4c38d" SourceId="1" SourceUrl="http://192.168.1.18:8000/Yun?xsd=xsd1" />
-    <MetadataFile FileName="Yun1.xsd" MetadataType="Schema" ID="cf491947-a15d-482c-81b6-bb7b2f461de5" SourceId="1" SourceUrl="http://192.168.1.18:8000/Yun?xsd=xsd0" />
-    <MetadataFile FileName="Yun2.xsd" MetadataType="Schema" ID="a9714574-05c9-44a4-98e2-b82ce71d2061" SourceId="1" SourceUrl="http://192.168.1.18:8000/Yun?xsd=xsd2" />
+    <MetadataFile FileName="Yun1.disco" MetadataType="Disco" ID="fbd2c92c-f54d-484e-a7ba-b2bf04118976" SourceId="1" SourceUrl="http://localhost:8000/Yun?disco" />
+    <MetadataFile FileName="Yun3.xsd" MetadataType="Schema" ID="a064ab29-b9ae-4527-835c-fa61c7af0d87" SourceId="1" SourceUrl="http://localhost:8000/Yun?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="6a4b6e02-f91f-4285-a87e-263a70a7ec5f" SourceId="1" SourceUrl="http://localhost:8000/Yun?wsdl" />
+    <MetadataFile FileName="Yun31.xsd" MetadataType="Schema" ID="7a1d3221-a02a-410e-8a1a-8bf3a9b111f6" SourceId="1" SourceUrl="http://localhost:8000/Yun?xsd=xsd2" />
+    <MetadataFile FileName="Yun32.xsd" MetadataType="Schema" ID="59856e37-8e07-4e6c-877e-9b8fb8150045" SourceId="1" SourceUrl="http://localhost:8000/Yun?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

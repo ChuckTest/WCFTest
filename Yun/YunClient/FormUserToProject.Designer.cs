@@ -70,7 +70,7 @@
             this.labelUserName.TabIndex = 4;
             this.labelUserName.Text = "用户名";
             // 
-            // FormUser
+            // FormUserToProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,9 +79,9 @@
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.labelUserName);
-            this.Name = "FormUser";
+            this.Name = "FormUserToProject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormUser";
+            this.Text = "FormUserToProject";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProject)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

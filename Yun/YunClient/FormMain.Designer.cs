@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonUserToProject = new System.Windows.Forms.Button();
+            this.buttonProjectToDevice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonUserToProject
@@ -41,11 +42,22 @@
             this.buttonUserToProject.UseVisualStyleBackColor = true;
             this.buttonUserToProject.Click += new System.EventHandler(this.buttonUserToProject_Click);
             // 
+            // buttonProjectToDevice
+            // 
+            this.buttonProjectToDevice.Location = new System.Drawing.Point(186, 25);
+            this.buttonProjectToDevice.Name = "buttonProjectToDevice";
+            this.buttonProjectToDevice.Size = new System.Drawing.Size(121, 48);
+            this.buttonProjectToDevice.TabIndex = 1;
+            this.buttonProjectToDevice.Text = "项目名-->设备";
+            this.buttonProjectToDevice.UseVisualStyleBackColor = true;
+            this.buttonProjectToDevice.Click += new System.EventHandler(this.buttonProjectToDevice_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 546);
+            this.Controls.Add(this.buttonProjectToDevice);
             this.Controls.Add(this.buttonUserToProject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -59,6 +71,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonUserToProject;
+        private System.Windows.Forms.Button buttonProjectToDevice;
 
 
     }

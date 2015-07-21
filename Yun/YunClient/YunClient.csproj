@@ -58,6 +58,12 @@
       <DependentUpon>FormUserToProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="FormProjectToDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectToDevice.Designer.cs">
+      <DependentUpon>FormProjectToDevice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\localhost\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -69,6 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserToProject.resx">
       <DependentUpon>FormUserToProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProjectToDevice.resx">
+      <DependentUpon>FormProjectToDevice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,14 +99,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\localhost\Service.wsdl" />
-    <None Include="Service References\localhost\Yun.xsd">
+    <None Include="Service References\localhost\Service1.wsdl" />
+    <None Include="Service References\localhost\Yun3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\localhost\Yun1.xsd">
+    <None Include="Service References\localhost\Yun31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\localhost\Yun2.xsd">
+    <None Include="Service References\localhost\Yun32.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -118,9 +127,6 @@
     <WCFMetadataStorage Include="Service References\localhost\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\localhost\Yun.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\localhost\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +137,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localhost\Yun1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -29,6 +29,21 @@ namespace YunClient
             catch (Exception ex)
             {
                 ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                ZBMMessageBox.ShowError(ex);
+            }
+        }
+
+        private void buttonProjectToDevice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormProjectToDevice form = new FormProjectToDevice();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                ZBMMessageBox.ShowError(ex);
             }
         }
     }

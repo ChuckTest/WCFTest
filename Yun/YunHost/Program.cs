@@ -13,32 +13,24 @@ namespace YunHost
     {
         static void Main(string[] args)
         {
-            Uri baseAddress = new Uri("http://192.168.1.18:8000/Yun");
-
-            ServiceHost host = new ServiceHost(typeof(Service),baseAddress);
+            ServiceHost host = new ServiceHost(typeof(Service));
 
             try
             {
-                WSHttpBinding binding = new WSHttpBinding();
-                binding.Security.Mode = SecurityMode.None;
-
-                host.AddServiceEndpoint(typeof(IService), binding, "Service");
-
-                ServiceMetadataBehavior serviceMetadataBehavior = new ServiceMetadataBehavior();
-                serviceMetadataBehavior.HttpGetEnabled = true;
-
-                host.Description.Behaviors.Add(serviceMetadataBehavior);
-
                 host.Open();
 
-                Console.WriteLine("The Service is Ready");
+                ServiceEndpointCollection endpoints = host.Description.Endpoints;
+                foreach (var item in endpoints)
+                {
+                    Console.WriteLine(item.Address);
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 host.Abort();
             }
-            Console.WriteLine("Press Enter to stop the service");
+            Console.WriteLine("Please press Enter to terminate the Host");
             Console.ReadLine();
             host.Close();
         }

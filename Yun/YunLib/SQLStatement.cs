@@ -24,5 +24,19 @@ SELECT a.[ID]
   on a.[ProjectID] = c.[ID]
   where b.[Name] = @UserName
 ";
+
+
+        internal static readonly string SelectDeviceByProject = @"
+SELECT 
+b.[ProjectName]
+,a.[ID]
+      ,[ProjectID]
+      ,[DeviceUID]
+      ,[DeviceState]
+      ,[LastLoginTime]
+  FROM [ProjectDevice] as a
+  inner join [ProjectInfo] as b
+  on a.[ProjectID] = b.[ID]
+  Where b.[ProjectName] = @ProjectName";
     }
 }

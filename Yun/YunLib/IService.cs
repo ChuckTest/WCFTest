@@ -13,5 +13,8 @@ namespace YunLib
     {
         [OperationContract]
         DataTable SelectProjectByUser(string userName);
+
+        [OperationContract]
+        DataTable SelectDeviceByProject(string projectName);
     }
 }

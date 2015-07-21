@@ -44,5 +44,19 @@ namespace YunLib
             dataTable = database.ExecuteDataTable(CommandType.Text, SQLStatement.SelectProjectByUser, array);
             return dataTable;
         }
+
+        internal DataTable SelectDeviceByProject(string projectName)
+        {
+            DataTable dataTable = null;
+            SqlParameter[] array = new SqlParameter[]
+            {
+                new SqlParameter("@ProjectName",SqlDbType.NVarChar)
+                {
+                    Value = projectName
+                }
+            };
+            dataTable = database.ExecuteDataTable(CommandType.Text, SQLStatement.SelectDeviceByProject, array);
+            return dataTable;
+        }
     }
 }

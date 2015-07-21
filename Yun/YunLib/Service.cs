@@ -15,5 +15,12 @@ namespace YunLib
             dataTable.TableName = "DataTable";
             return dataTable;
         }
+
+        public DataTable SelectDeviceByProject(string projectName)
+        {
+            DataTable dataTable = DAOManager.Instance.SelectDeviceByProject(projectName);
+            dataTable.TableName = "DataTable";
+            return dataTable;
+        }
     }
 }
