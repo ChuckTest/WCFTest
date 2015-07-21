@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace ContentTypes
 {
     [DataContract(Namespace = "http://www.thatindigogirl.com/samples/2006/06")]
-    public class LinkItem
+    public class LinkItem : IExtensibleDataObject
     {
         [DataMember(Name = "ID", Order = 0, IsRequired = false)]
         private long id;
@@ -48,12 +48,28 @@ namespace ContentTypes
             set { dateEnd = value; }
         }
 
-        [DataMember(Name = "Url", Order = 5, IsRequired = false)]
+        //[DataMember(Name = "Url", Order = 5, IsRequired = false)]
         private string url;
         public string Url
         {
             get { return url; }
             set { url = value; }
         }
+
+        private ExtensionDataObject extensionData;
+        public ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return extensionData;
+            }
+            set
+            {
+                extensionData = value;
+            }
+        }
+
+        [DataMember(Name = "Category", Order = 6, IsRequired = false)]
+        public LinkItemCategories Category;
     }
 }

@@ -20,15 +20,22 @@ namespace GigEntry
 
         private void cmdSave_Click(object sender, EventArgs e)
         {
-            LinkItem item = new LinkItem();
-            item.ID = int.Parse(this.txtId.Text);
-            item.Title = this.txtTitle.Text;
-            item.Description = this.txtDescription.Text;
-            item.DateStart = this.dtpStart.Value;
-            item.DateEnd = this.dtpEnd.Value;
-            item.Url = this.txtUrl.Text;
+            try
+            {
+                LinkItem item = new LinkItem();
+                item.ID = int.Parse(this.txtId.Text);
+                item.Title = this.txtTitle.Text;
+                item.Description = this.txtDescription.Text;
+                item.DateStart = this.dtpStart.Value;
+                item.DateEnd = this.dtpEnd.Value;
+                item.Url = this.txtUrl.Text;
 
-            proxy.SaveGig(item);
+                proxy.SaveGig(item);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cmdGet_Click(object sender, EventArgs e)
