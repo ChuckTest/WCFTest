@@ -5,10 +5,10 @@ using System.Runtime.Serialization;
 
 namespace ContentTypes
 {
-    [DataContract]
+    [DataContract(Namespace = "http://www.thatindigogirl.com/samples/2006/06")]
     public class LinkItem
     {
-        [DataMember]
+        [DataMember(Name = "ID", Order = 0, IsRequired = false)]
         private long id;
         public long ID
         {
@@ -16,7 +16,7 @@ namespace ContentTypes
             set { id = value; }
         }
 
-        [DataMember]
+        [DataMember(Name = "Title", Order = 1, IsRequired = true)]
         private string title;
         public string Title
         {
@@ -24,7 +24,7 @@ namespace ContentTypes
             set { title = value; }
         }
 
-        [DataMember]
+        [DataMember(Name = "Description", Order = 2, IsRequired = true)]
         private string description;
         public string Description
         {
@@ -32,7 +32,7 @@ namespace ContentTypes
             set { description = value; }
         }
 
-        [DataMember]
+        [DataMember(Name = "DateStart", Order = 3, IsRequired = true)]
         private DateTime dateStart;
         public DateTime DateStart
         {
@@ -40,7 +40,7 @@ namespace ContentTypes
             set { dateStart = value; }
         }
 
-        [DataMember]
+        [DataMember(Name = "DateEnd", Order = 4, IsRequired = false)]
         private DateTime dateEnd;
         public DateTime DateEnd
         {
@@ -48,7 +48,7 @@ namespace ContentTypes
             set { dateEnd = value; }
         }
 
-        [DataMember]
+        [DataMember(Name = "Url", Order = 5, IsRequired = false)]
         private string url;
         public string Url
         {
