@@ -22,5 +22,12 @@ namespace YunLib
             dataTable.TableName = "DataTable";
             return dataTable;
         }
+
+        public DataTable SelectSensorByProject(string projectName)
+        {
+            DataTable dataTable = DAOManager.Instance.SelectSensorByProject(projectName);
+            dataTable.TableName = "DataTable";
+            return dataTable;
+        }
     }
 }

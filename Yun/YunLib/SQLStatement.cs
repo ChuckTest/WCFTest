@@ -37,6 +37,27 @@ b.[ProjectName]
   FROM [ProjectDevice] as a
   inner join [ProjectInfo] as b
   on a.[ProjectID] = b.[ID]
-  Where b.[ProjectName] = @ProjectName";
+  Where b.[ProjectName] = @ProjectName
+";
+
+        internal static readonly string SelectSensorByProject = @"
+SELECT 
+b.[ProjectName]
+,a.[ID]
+      ,[ProjectID]
+      ,[SID]
+      ,[SenName]
+      ,[SenEnable]
+      ,[SenRunFreq]
+      ,[SenType]
+      ,[SenBalance]
+      ,[ConvertFunc]
+      ,[ValueUnit]
+      ,[SenDesc]
+  FROM [ProjectSensor] as a
+  inner join [ProjectInfo] as b
+  on a.[ProjectID] = b.[ID]
+  Where [ProjectName] = @ProjectName
+  ";
     }
 }

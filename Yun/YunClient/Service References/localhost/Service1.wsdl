@@ -19,6 +19,12 @@
   <wsdl:message name="IService_SelectDeviceByProject_OutputMessage">
     <wsdl:part name="parameters" element="tns:SelectDeviceByProjectResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_SelectSensorByProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSensorByProject" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectSensorByProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSensorByProjectResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="SelectProjectByUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectProjectByUser" message="tns:IService_SelectProjectByUser_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="SelectDeviceByProject">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectDeviceByProject" message="tns:IService_SelectDeviceByProject_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectDeviceByProjectResponse" message="tns:IService_SelectDeviceByProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSensorByProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectSensorByProject" message="tns:IService_SelectSensorByProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectSensorByProjectResponse" message="tns:IService_SelectSensorByProject_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelectDeviceByProject">
       <soap:operation soapAction="http://tempuri.org/IService/SelectDeviceByProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSensorByProject">
+      <soap:operation soapAction="http://tempuri.org/IService/SelectSensorByProject" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -16,5 +16,8 @@ namespace YunLib
 
         [OperationContract]
         DataTable SelectDeviceByProject(string projectName);
+
+        [OperationContract]
+        DataTable SelectSensorByProject(string projectName);
     }
 }

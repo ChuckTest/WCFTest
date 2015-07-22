@@ -20,6 +20,9 @@ namespace YunClient.localhost {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectDeviceByProject", ReplyAction="http://tempuri.org/IService/SelectDeviceByProjectResponse")]
         System.Data.DataTable SelectDeviceByProject(string projectName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectSensorByProject", ReplyAction="http://tempuri.org/IService/SelectSensorByProjectResponse")]
+        System.Data.DataTable SelectSensorByProject(string projectName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +58,10 @@ namespace YunClient.localhost {
         
         public System.Data.DataTable SelectDeviceByProject(string projectName) {
             return base.Channel.SelectDeviceByProject(projectName);
+        }
+        
+        public System.Data.DataTable SelectSensorByProject(string projectName) {
+            return base.Channel.SelectSensorByProject(projectName);
         }
     }
 }

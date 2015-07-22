@@ -30,6 +30,7 @@
         {
             this.buttonUserToProject = new System.Windows.Forms.Button();
             this.buttonProjectToDevice = new System.Windows.Forms.Button();
+            this.buttonProjectToSensor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonUserToProject
@@ -52,11 +53,22 @@
             this.buttonProjectToDevice.UseVisualStyleBackColor = true;
             this.buttonProjectToDevice.Click += new System.EventHandler(this.buttonProjectToDevice_Click);
             // 
+            // buttonProjectToSensor
+            // 
+            this.buttonProjectToSensor.Location = new System.Drawing.Point(342, 25);
+            this.buttonProjectToSensor.Name = "buttonProjectToSensor";
+            this.buttonProjectToSensor.Size = new System.Drawing.Size(121, 48);
+            this.buttonProjectToSensor.TabIndex = 2;
+            this.buttonProjectToSensor.Text = "项目名-->传感器";
+            this.buttonProjectToSensor.UseVisualStyleBackColor = true;
+            this.buttonProjectToSensor.Click += new System.EventHandler(this.buttonProjectToSensor_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 546);
+            this.Controls.Add(this.buttonProjectToSensor);
             this.Controls.Add(this.buttonProjectToDevice);
             this.Controls.Add(this.buttonUserToProject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -72,6 +84,7 @@
 
         private System.Windows.Forms.Button buttonUserToProject;
         private System.Windows.Forms.Button buttonProjectToDevice;
+        private System.Windows.Forms.Button buttonProjectToSensor;
 
 
     }

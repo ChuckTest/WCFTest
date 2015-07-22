@@ -51,6 +51,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProjectToSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectToSensor.Designer.cs">
+      <DependentUpon>FormProjectToSensor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUserToProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProjectToSensor.resx">
+      <DependentUpon>FormProjectToSensor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserToProject.resx">
       <DependentUpon>FormUserToProject.cs</DependentUpon>
