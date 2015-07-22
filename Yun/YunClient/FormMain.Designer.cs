@@ -31,6 +31,7 @@
             this.buttonUserToProject = new System.Windows.Forms.Button();
             this.buttonProjectToDevice = new System.Windows.Forms.Button();
             this.buttonProjectToSensor = new System.Windows.Forms.Button();
+            this.buttonProjectUnitSensor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonUserToProject
@@ -63,11 +64,22 @@
             this.buttonProjectToSensor.UseVisualStyleBackColor = true;
             this.buttonProjectToSensor.Click += new System.EventHandler(this.buttonProjectToSensor_Click);
             // 
+            // buttonProjectUnitSensor
+            // 
+            this.buttonProjectUnitSensor.Location = new System.Drawing.Point(27, 126);
+            this.buttonProjectUnitSensor.Name = "buttonProjectUnitSensor";
+            this.buttonProjectUnitSensor.Size = new System.Drawing.Size(121, 48);
+            this.buttonProjectUnitSensor.TabIndex = 3;
+            this.buttonProjectUnitSensor.Text = "项目断面-->项目传感器";
+            this.buttonProjectUnitSensor.UseVisualStyleBackColor = true;
+            this.buttonProjectUnitSensor.Click += new System.EventHandler(this.buttonProjectUnitSensor_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 546);
+            this.Controls.Add(this.buttonProjectUnitSensor);
             this.Controls.Add(this.buttonProjectToSensor);
             this.Controls.Add(this.buttonProjectToDevice);
             this.Controls.Add(this.buttonUserToProject);
@@ -85,6 +97,7 @@
         private System.Windows.Forms.Button buttonUserToProject;
         private System.Windows.Forms.Button buttonProjectToDevice;
         private System.Windows.Forms.Button buttonProjectToSensor;
+        private System.Windows.Forms.Button buttonProjectUnitSensor;
 
 
     }

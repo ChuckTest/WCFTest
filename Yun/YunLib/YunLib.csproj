@@ -52,6 +52,10 @@
       <Project>{f5e3cc3e-7a3a-4a6d-8d72-486beb01c4e9}</Project>
       <Name>DAO</Name>
     </ProjectReference>
+    <ProjectReference Include="F:\Software\ZBMYun\SourceCode\ZITaker\Log\Log.csproj">
+      <Project>{0392085e-9f4f-406e-87e3-746a3bc1f140}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

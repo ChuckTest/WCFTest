@@ -23,6 +23,15 @@ namespace YunClient.localhost {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectSensorByProject", ReplyAction="http://tempuri.org/IService/SelectSensorByProjectResponse")]
         System.Data.DataTable SelectSensorByProject(string projectName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectProject", ReplyAction="http://tempuri.org/IService/SelectProjectResponse")]
+        System.Data.DataTable SelectProject();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectUnitByProject", ReplyAction="http://tempuri.org/IService/SelectUnitByProjectResponse")]
+        System.Data.DataTable SelectUnitByProject(string projectName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectProjectSensorByProjectUnit", ReplyAction="http://tempuri.org/IService/SelectProjectSensorByProjectUnitResponse")]
+        System.Data.DataTable SelectProjectSensorByProjectUnit(int projectUnitID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -62,6 +71,18 @@ namespace YunClient.localhost {
         
         public System.Data.DataTable SelectSensorByProject(string projectName) {
             return base.Channel.SelectSensorByProject(projectName);
+        }
+        
+        public System.Data.DataTable SelectProject() {
+            return base.Channel.SelectProject();
+        }
+        
+        public System.Data.DataTable SelectUnitByProject(string projectName) {
+            return base.Channel.SelectUnitByProject(projectName);
+        }
+        
+        public System.Data.DataTable SelectProjectSensorByProjectUnit(int projectUnitID) {
+            return base.Channel.SelectProjectSensorByProjectUnit(projectUnitID);
         }
     }
 }

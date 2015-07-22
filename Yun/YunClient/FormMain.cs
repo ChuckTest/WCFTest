@@ -60,5 +60,19 @@ namespace YunClient
                 ZBMMessageBox.ShowError(ex);
             }
         }
+
+        private void buttonProjectUnitSensor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormProjectUnitSensor form = new FormProjectUnitSensor();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                ZBMMessageBox.ShowError(ex);
+            }
+        }
     }
 }
