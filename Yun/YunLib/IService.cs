@@ -32,5 +32,15 @@ namespace YunLib
 
         [OperationContract]
         DataTable SelectProjectSensorByProjectUnit(int projectUnitID);
+
+        //根据项目设备号获取项目设备通道和项目传感器的关联
+        [OperationContract]
+        DataTable SelectChannelSensorByProjectDevice(int projectDeviceID);
+
+        [OperationContract]
+        DataTable SelectUser();
+
+        [OperationContract]
+        DataTable SelectDevice();
     }
 }

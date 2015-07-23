@@ -104,5 +104,31 @@ SELECT
   on c.[SID] = d.[SID]
   where a.[UnitID] = @ProjectUnitID
 ";
+
+
+        internal static readonly string SelectChannelSensorByProjectDeviceID = @"
+SELECT [ID] as 通道传感器编号
+      ,[PDID] as 项目设备编号
+      ,[ChNum] as  通道编号
+      ,[SIdx] as 项目传感器编号
+  FROM [DeviceChSensor] as a
+ Where [PDID] = @ProjectDeviceID";
+
+        internal static readonly string SelectUser = @"
+SELECT [ID] as 编号
+      ,[Name]  名称
+      ,[AliasName]  别名
+      ,[Tel]  电话号码
+      ,[Desc] 介绍
+      ,[LastLoginTime] 上次登录时间
+ FROM [User]
+";
+
+        internal static readonly string SelectDevice = @"
+SELECT
+[UID] as 编号
+,[Type] as 类型
+,[MaxChCount] as 最大通道数
+FROM [DeviceInfo]";
     }
 }

@@ -50,5 +50,26 @@ namespace YunLib
             dataTable.TableName = "DataTable";
             return dataTable;
         }
+
+        public DataTable SelectChannelSensorByProjectDevice(int projectDeviceID)
+        {
+            DataTable dataTable = DAOManager.Instance.SelectChannelSensorByProjectDeviceID(projectDeviceID);
+            dataTable.TableName = "DataTable";
+            return dataTable;
+        }
+
+        public DataTable SelectUser()
+        {
+            DataTable dataTable = DAOManager.Instance.SelectUser();
+            dataTable.TableName = "DataTable";
+            return dataTable;
+        }
+
+        public DataTable SelectDevice()
+        {
+            DataTable dataTable = DAOManager.Instance.SelectDevice();
+            dataTable.TableName = "DataTable";
+            return dataTable;
+        }
     }
 }

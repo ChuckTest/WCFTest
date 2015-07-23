@@ -12,17 +12,17 @@ using ZBM.ZITaker.Log;
 
 namespace YunClient
 {
-    public partial class FormProjectUnitSensor : Form
+    public partial class FormChannelToSensor : Form
     {
         private DataTable dataTableProject;
         private DataRow dataRowProject;
 
-        private DataTable dataTableProjectUnit;
-        private DataRow dataRowProjectUnit;
+        private DataTable dataTableDevice;
+        private DataRow dataRowDevice;
 
-        private DataTable dataTableProjectSensor;
+        private DataTable dataTableChannelSensor;
 
-        public FormProjectUnitSensor()
+        public FormChannelToSensor()
         {
             InitializeComponent();
             try
@@ -37,9 +37,13 @@ namespace YunClient
             }
         }
 
-        /// <summary>
-        /// 加载项目列表
-        /// </summary>
+        private void DataGridViewSetting()
+        {
+            ZBMDataGridView.Config(dataGridViewProject);
+            ZBMDataGridView.Config(dataGridViewProjectDevice);
+            ZBMDataGridView.Config(dataGridViewChannelSensor);
+        }
+
         private void LoadProject()
         {
             try
@@ -55,28 +59,20 @@ namespace YunClient
             }
         }
 
-        private void DataGridViewSetting()
-        {
-            ZBMDataGridView.Config(dataGridViewProject);
-            ZBMDataGridView.Config(dataGridViewProjectUnit);
-            ZBMDataGridView.Config(dataGridViewProjectSensor);
-        }
-
         private void dataGridViewProject_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
             try
             {
                 if (e.StateChanged == DataGridViewElementStates.Selected)
                 {
-                    dataGridViewProjectUnit.DataSource = null;
-                    if (dataTableProject.Rows.Count > 0)
+                    if (dataGridViewProject.Rows.Count > 0)
                     {
                         dataRowProject = dataTableProject.Rows[e.Row.Index];
-                        //根据项目编号来获取断面以及传感器的信息
                         string projectName = Convert.ToString(dataRowProject["ProjectName"]);
+
                         ServiceClient client = new ServiceClient();
-                        dataTableProjectUnit = client.SelectUnitByProject(projectName);
-                        dataGridViewProjectUnit.DataSource = dataTableProjectUnit;
+                        dataTableDevice = client.SelectDeviceByProject(projectName);
+                        dataGridViewProjectDevice.DataSource = dataTableDevice;
                     }
                 }
             }
@@ -87,23 +83,22 @@ namespace YunClient
             }
         }
 
-        private void dataGridViewProjectUnit_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        private void dataGridViewProjectDevice_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
             try
             {
                 if (e.StateChanged == DataGridViewElementStates.Selected)
                 {
-                    dataGridViewProjectSensor.DataSource = null;
-                    if (dataTableProjectUnit.Rows.Count > 0)
+                    if (dataTableDevice.Rows.Count > 0)
                     {
-                        dataRowProjectUnit = dataTableProjectUnit.Rows[e.Row.Index];
-                        //断面是直接和项目绑定的
-                        int projectUnitID = Convert.ToInt32(dataRowProjectUnit["断面编号"]);
-                        ServiceClient client = new ServiceClient();
-                        dataTableProjectSensor = client.SelectProjectSensorByProjectUnit(projectUnitID);
-                        dataGridViewProjectSensor.DataSource = dataTableProjectSensor;
+                        dataRowDevice = dataTableDevice.Rows[e.Row.Index];
+                        int projectDeviceID = Convert.ToInt32(dataRowDevice["ID"]);
+                        ServiceClient client=new ServiceClient();
+                        dataTableChannelSensor = client.SelectChannelSensorByProjectDevice(projectDeviceID);
+                        dataGridViewChannelSensor.DataSource = dataTableChannelSensor;
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -111,7 +106,5 @@ namespace YunClient
                 ZBMMessageBox.ShowError(ex);
             }
         }
-
-
     }
 }

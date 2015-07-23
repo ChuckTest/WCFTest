@@ -147,5 +147,54 @@ namespace YunLib
                 throw;
             }
         }
+
+        internal DataTable SelectChannelSensorByProjectDeviceID(int projectDeviceID)
+        {
+            try
+            {
+                SqlParameter[] array = new SqlParameter[]
+                {
+                    new SqlParameter("@ProjectDeviceID",SqlDbType.Int)
+                    {
+                        Value = projectDeviceID
+                    }
+                };
+                DataTable dataTable = database.ExecuteDataTable(CommandType.Text, SQLStatement.SelectChannelSensorByProjectDeviceID, array);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                throw;
+            }
+        }
+
+        internal DataTable SelectUser()
+        {
+            try
+            {
+                DataTable dataTable = database.ExecuteDataTable(CommandType.Text, SQLStatement.SelectUser, null);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                throw;
+            }
+        }
+
+        internal DataTable SelectDevice()
+        {
+            try
+            {
+                DataTable dataTable = database.ExecuteDataTable(CommandType.Text, SQLStatement.SelectDevice, null);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                throw;
+            }
+        }
     }
 }
