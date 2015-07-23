@@ -130,5 +130,29 @@ SELECT
 ,[Type] as 类型
 ,[MaxChCount] as 最大通道数
 FROM [DeviceInfo]";
+
+        internal static readonly string SelectSensor = @"
+SELECT
+[SID] as 编号
+,[Type] as 类型
+,[Vender] as 生产厂家
+FROM
+[SensorInfo]";
+
+        internal static readonly string SelectUnit = @"
+SELECT 
+a.[ID] as 编号
+,a.[ProjectID] as 项目编号
+,b.[ProjectName] as 项目名称
+,a.[UnitName] as 名称
+,a.[UnitDesc] as 描述
+,a.[Enable] as 启用状态
+FROM 
+[UnitInfo] as a
+inner join 
+[ProjectInfo] as b
+on 
+a.[ProjectID] = b.[ID]
+";
     }
 }

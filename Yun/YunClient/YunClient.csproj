@@ -57,6 +57,18 @@
     <Compile Include="Entity\FormProject.Designer.cs">
       <DependentUpon>FormProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entity\FormSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entity\FormSensor.Designer.cs">
+      <DependentUpon>FormSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\FormUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entity\FormUnit.Designer.cs">
+      <DependentUpon>FormUnit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entity\FormProject.resx">
       <DependentUpon>FormProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\FormSensor.resx">
+      <DependentUpon>FormSensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\FormUnit.resx">
+      <DependentUpon>FormUnit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entity\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>

@@ -131,5 +131,33 @@ namespace YunClient
                 ZBMMessageBox.ShowError(ex);
             }
         }
+
+        private void buttonSensor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormSensor form = new FormSensor();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                ZBMMessageBox.ShowError(ex);
+            }
+        }
+
+        private void buttonUnit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormUnit form = new FormUnit();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                ZBMMessageBox.ShowError(ex);
+            }
+        }
     }
 }

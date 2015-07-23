@@ -38,6 +38,8 @@
             this.buttonUser = new System.Windows.Forms.Button();
             this.buttonProject = new System.Windows.Forms.Button();
             this.buttonDevice = new System.Windows.Forms.Button();
+            this.buttonSensor = new System.Windows.Forms.Button();
+            this.buttonUnit = new System.Windows.Forms.Button();
             this.groupBoxRelation.SuspendLayout();
             this.groupBoxEntity.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +110,8 @@
             // 
             // groupBoxEntity
             // 
+            this.groupBoxEntity.Controls.Add(this.buttonUnit);
+            this.groupBoxEntity.Controls.Add(this.buttonSensor);
             this.groupBoxEntity.Controls.Add(this.buttonDevice);
             this.groupBoxEntity.Controls.Add(this.buttonProject);
             this.groupBoxEntity.Controls.Add(this.buttonUser);
@@ -148,6 +152,26 @@
             this.buttonDevice.UseVisualStyleBackColor = true;
             this.buttonDevice.Click += new System.EventHandler(this.buttonDevice_Click);
             // 
+            // buttonSensor
+            // 
+            this.buttonSensor.Location = new System.Drawing.Point(439, 20);
+            this.buttonSensor.Name = "buttonSensor";
+            this.buttonSensor.Size = new System.Drawing.Size(96, 48);
+            this.buttonSensor.TabIndex = 4;
+            this.buttonSensor.Text = "传感器";
+            this.buttonSensor.UseVisualStyleBackColor = true;
+            this.buttonSensor.Click += new System.EventHandler(this.buttonSensor_Click);
+            // 
+            // buttonUnit
+            // 
+            this.buttonUnit.Location = new System.Drawing.Point(19, 108);
+            this.buttonUnit.Name = "buttonUnit";
+            this.buttonUnit.Size = new System.Drawing.Size(96, 48);
+            this.buttonUnit.TabIndex = 5;
+            this.buttonUnit.Text = "断面";
+            this.buttonUnit.UseVisualStyleBackColor = true;
+            this.buttonUnit.Click += new System.EventHandler(this.buttonUnit_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -178,6 +202,8 @@
         private System.Windows.Forms.Button buttonUser;
         private System.Windows.Forms.Button buttonProject;
         private System.Windows.Forms.Button buttonDevice;
+        private System.Windows.Forms.Button buttonSensor;
+        private System.Windows.Forms.Button buttonUnit;
 
 
     }

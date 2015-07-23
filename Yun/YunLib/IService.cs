@@ -42,5 +42,11 @@ namespace YunLib
 
         [OperationContract]
         DataTable SelectDevice();
+
+        [OperationContract]
+        DataTable SelectSensor();
+
+        [OperationContract]
+        DataTable SelectUnit();
     }
 }

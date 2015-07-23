@@ -41,6 +41,12 @@ namespace YunClient.localhost {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectDevice", ReplyAction="http://tempuri.org/IService/SelectDeviceResponse")]
         System.Data.DataTable SelectDevice();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectSensor", ReplyAction="http://tempuri.org/IService/SelectSensorResponse")]
+        System.Data.DataTable SelectSensor();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectUnit", ReplyAction="http://tempuri.org/IService/SelectUnitResponse")]
+        System.Data.DataTable SelectUnit();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -104,6 +110,14 @@ namespace YunClient.localhost {
         
         public System.Data.DataTable SelectDevice() {
             return base.Channel.SelectDevice();
+        }
+        
+        public System.Data.DataTable SelectSensor() {
+            return base.Channel.SelectSensor();
+        }
+        
+        public System.Data.DataTable SelectUnit() {
+            return base.Channel.SelectUnit();
         }
     }
 }

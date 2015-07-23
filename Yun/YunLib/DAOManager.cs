@@ -196,5 +196,33 @@ namespace YunLib
                 throw;
             }
         }
+
+        internal DataTable SelectSensor()
+        {
+            try
+            {
+                DataTable dataTable = database.ExecuteDataTable(CommandType.Text, SQLStatement.SelectSensor, null);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                throw;
+            }
+        }
+
+        internal DataTable SelectUnit()
+        {
+            try
+            {
+                DataTable dataTable = database.ExecuteDataTable(CommandType.Text, SQLStatement.SelectUnit, null);
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+                throw;
+            }
+        }
     }
 }

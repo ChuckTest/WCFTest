@@ -71,5 +71,19 @@ namespace YunLib
             dataTable.TableName = "DataTable";
             return dataTable;
         }
+
+        public DataTable SelectSensor()
+        {
+            DataTable dataTable = DAOManager.Instance.SelectSensor();
+            dataTable.TableName = "DataTable";
+            return dataTable;
+        }
+
+        public DataTable SelectUnit()
+        {
+            DataTable dataTable = DAOManager.Instance.SelectUnit();
+            dataTable.TableName = "DataTable";
+            return dataTable;
+        }
     }
 }
