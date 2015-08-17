@@ -5,6 +5,7 @@
 // IDesign: www.idesign.net
 
 using System;
+using System.Linq;
 using System.ServiceModel;
 using HelloIndigo;
 
@@ -18,7 +19,7 @@ namespace Host
             {
 
                 host.Open();
-
+                host.Description.Endpoints.Select(x => x).ToList().ForEach(x => Console.WriteLine(x.Address));
                 Console.WriteLine("Press <ENTER> to terminate the host application");
                 Console.ReadLine();
    
