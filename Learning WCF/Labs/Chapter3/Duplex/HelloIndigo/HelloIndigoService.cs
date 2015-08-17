@@ -16,6 +16,7 @@ namespace HelloIndigo
         void HelloIndigo(string message);
     }
 
+    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
     public class HelloIndigoService : IHelloIndigoService
     {
         #region IHelloIndigoService Members

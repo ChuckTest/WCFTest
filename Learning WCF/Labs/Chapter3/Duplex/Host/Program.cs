@@ -5,8 +5,8 @@
 // IDesign: www.idesign.net
 
 using System;
-using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Description;
 using HelloIndigo;
 
 namespace Host
@@ -19,7 +19,11 @@ namespace Host
             {
 
                 host.Open();
-                host.Description.Endpoints.Select(x => x).ToList().ForEach(x => Console.WriteLine(x.Address));
+                ServiceEndpointCollection collection = host.Description.Endpoints;
+                foreach (ServiceEndpoint endpoint in collection)
+                {
+                    Console.WriteLine(endpoint.Address);
+                }
                 Console.WriteLine("Press <ENTER> to terminate the host application");
                 Console.ReadLine();
    
