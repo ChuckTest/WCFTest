@@ -1,3 +1,6 @@
+using System.ComponentModel;
+using System.Windows.Forms;
+
 namespace WinClient
 {
     partial class Form1
@@ -5,7 +8,7 @@ namespace WinClient
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -55,7 +58,7 @@ namespace WinClient
 
         #endregion
 
-        private System.Windows.Forms.Button cmdInvoke;
+        private Button cmdInvoke;
     }
 }
 
