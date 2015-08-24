@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ServiceModel;
 using Client.ServiceReference1;
 
@@ -9,7 +6,7 @@ namespace Client
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
@@ -22,14 +19,13 @@ namespace Client
 
 
                 client.AddTo(10);
-                client.SubtractFrom(100);
-                client.DivideBy(10);
-                client.MultiplyBy(3);
+                //client.SubtractFrom(100);
+                //client.DivideBy(10);
+                //client.MultiplyBy(3);
 
                 Console.WriteLine("Press Enter to terminate the client");
                 Console.ReadKey();
-                client.Close();
-
+                //client.Close();
 
             }
             catch (Exception ex)

@@ -8,64 +8,69 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.CodeDom.Compiler;
+using System.Diagnostics;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+
 namespace Client.ServiceReference1 {
     
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="ServiceReference1.ICalculatorDuplex", CallbackContract=typeof(Client.ServiceReference1.ICalculatorDuplexCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="ServiceReference1.ICalculatorDuplex", CallbackContract=typeof(ICalculatorDuplexCallback), SessionMode=SessionMode.Required)]
     public interface ICalculatorDuplex {
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/Clear")]
+        [OperationContract(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/Clear")]
         void Clear();
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/AddTo")]
+        [OperationContract(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/AddTo")]
         void AddTo(double n);
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/SubtractFrom")]
+        [OperationContract(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/SubtractFrom")]
         void SubtractFrom(double n);
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/MultiplyBy")]
+        [OperationContract(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/MultiplyBy")]
         void MultiplyBy(double n);
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/DivideBy")]
+        [OperationContract(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/DivideBy")]
         void DivideBy(double n);
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
     public interface ICalculatorDuplexCallback {
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/Equals")]
+        [OperationContract(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/Equals")]
         void Equals(double result);
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/Equation")]
+        [OperationContract(IsOneWay=true, Action="http://Microsoft.ServiceModel.Samples/ICalculatorDuplex/Equation")]
         void Equation(string eqn);
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICalculatorDuplexChannel : Client.ServiceReference1.ICalculatorDuplex, System.ServiceModel.IClientChannel {
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    public interface ICalculatorDuplexChannel : ICalculatorDuplex, IClientChannel {
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CalculatorDuplexClient : System.ServiceModel.DuplexClientBase<Client.ServiceReference1.ICalculatorDuplex>, Client.ServiceReference1.ICalculatorDuplex {
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    public partial class CalculatorDuplexClient : DuplexClientBase<ICalculatorDuplex>, ICalculatorDuplex {
         
-        public CalculatorDuplexClient(System.ServiceModel.InstanceContext callbackInstance) : 
+        public CalculatorDuplexClient(InstanceContext callbackInstance) : 
                 base(callbackInstance) {
         }
         
-        public CalculatorDuplexClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+        public CalculatorDuplexClient(InstanceContext callbackInstance, string endpointConfigurationName) : 
                 base(callbackInstance, endpointConfigurationName) {
         }
         
-        public CalculatorDuplexClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+        public CalculatorDuplexClient(InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public CalculatorDuplexClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CalculatorDuplexClient(InstanceContext callbackInstance, string endpointConfigurationName, EndpointAddress remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public CalculatorDuplexClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CalculatorDuplexClient(InstanceContext callbackInstance, Binding binding, EndpointAddress remoteAddress) : 
                 base(callbackInstance, binding, remoteAddress) {
         }
         

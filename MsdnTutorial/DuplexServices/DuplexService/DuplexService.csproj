@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CalculatorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimerCallback.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DuplexServiceContract\DuplexServiceContract.csproj">

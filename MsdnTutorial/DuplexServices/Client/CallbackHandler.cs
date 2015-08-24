@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Client.ServiceReference1;
 
 namespace Client
@@ -10,7 +7,7 @@ namespace Client
     {
         public void Equals(double result)
         {
-            Console.WriteLine("Equals({0})", result);
+            Console.WriteLine("Time = {1},result = {0}", result,DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ff"));
         }
 
         public void Equation(string eqn)
