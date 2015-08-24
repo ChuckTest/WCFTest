@@ -16,6 +16,10 @@ namespace HelloIndigo
         void HelloIndigo(string message);
     }
 
+    /// <summary>
+    /// ConcurrencyMode…Ë÷√Œ™Reentrant
+    /// ∑Ò‘ÚYou°Øll receive an InvalidOperationException at the service stating that the operation will deadlock.
+    /// </summary>
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
     public class HelloIndigoService : IHelloIndigoService
     {
@@ -23,7 +27,9 @@ namespace HelloIndigo
 
         public void HelloIndigo(string message)
         {
-
+            IHelloIndigoServiceCallback callback =
+                OperationContext.Current.GetCallbackChannel<IHelloIndigoServiceCallback>();
+            callback.HelloIndigoCallback(message);
         }
           
         #endregion

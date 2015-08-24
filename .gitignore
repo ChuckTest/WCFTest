@@ -1,8 +1,19 @@
+#此为注释，将被git忽略[以#开头的行]
 bin
 obj
+# .suo文件，是Visual Studio生成的，包含断点设置信息
 *.suo
+
 *.user
+# .vs文件夹，是Visual Studio 2015生成的，类似于.git文件夹
 *.vs
+# .gitattributes 目前使用不到,是Visual Studio 2015自动生成的
 .gitattributes
+# Backup文件夹是高版本Visual Studio打开不兼容的低版本的Visual Studio创建的项目的时候，自动生成的备份
 Backup
+# Backup的备份日志
 UpgradeLog.htm
+# Service References文件夹，是WCF客户端添加服务引用的时候自动生成的
+Service References/
+# 不忽略Service References\localhost文件夹下的Reference.cs文件
+!Service References\localhost\Reference.cs 
