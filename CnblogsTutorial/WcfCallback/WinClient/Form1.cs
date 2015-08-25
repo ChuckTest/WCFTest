@@ -8,9 +8,11 @@ namespace WinClient
     public partial class Form1 : Form
     {
         private IAddService channel;
+
         public Form1()
         {
             InitializeComponent();
+            FormClosed += Form1_FormClosed;
             EventManager.Instance.DataArrived += Instance_DataArrived;
             ButtonStatus(true);
         }
@@ -47,21 +49,40 @@ namespace WinClient
             InstanceContext instanceContext = new InstanceContext(new CallbackHandler());
             var channelFactory = new DuplexChannelFactory<IAddService>(instanceContext, "AddService_Binding");
             channel = channelFactory.CreateChannel();
-            channel.Login("chucklu");
+
+            string userName = textBoxUserName.Text.Trim();
+            if (userName.Equals(string.Empty))
+            {
+                MessageBox.Show(@"用户名不允许重复");
+            }
+            else
+            {
+                channel.Login(userName);
+            }
         }
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
             ButtonStatus(true);
-            if (channel != null)
-            {
-                ((IClientChannel)channel).Close();
-            }
+            CloseChannel();
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxResult.Clear();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CloseChannel();
+        }
+
+        private void CloseChannel()
+        {
+            if (channel != null)
+            {
+                ((IClientChannel)channel).Close();
+            }
         }
     }
 }
