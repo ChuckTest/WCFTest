@@ -13,7 +13,7 @@ namespace Host
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             using (ServiceHost host = new ServiceHost(typeof(HelloIndigoService)))
             {
