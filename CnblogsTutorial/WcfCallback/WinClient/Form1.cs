@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
 using System.Windows.Forms;
 using ServiceContracts;
 
@@ -13,7 +7,7 @@ namespace WinClient
 {
     public partial class Form1 : Form
     {
-        private IAddService channel = null;
+        private IAddService channel;
         public Form1()
         {
             InitializeComponent();
@@ -31,8 +25,8 @@ namespace WinClient
         {
             try
             {
-                Console.WriteLine(String.Format("{0}:数据接收", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")));
-                textBoxResult.Invoke((MethodInvoker) delegate()
+                Console.WriteLine(@"{0}:数据接收", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                textBoxResult.Invoke((MethodInvoker) delegate
                 {
                     textBoxResult.AppendText(string.Join(",", e.List));
                     textBoxResult.AppendText(Environment.NewLine + Environment.NewLine);

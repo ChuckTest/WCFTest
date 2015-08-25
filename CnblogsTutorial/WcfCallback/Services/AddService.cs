@@ -3,7 +3,6 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using System.Text;
 using System.Timers;
 using ServiceContracts;
 using ZBM.ZITaker.Log;
@@ -17,7 +16,7 @@ namespace Services
             new ConcurrentDictionary<string, IAddServiceCallback>();
 
         private static Timer timer;
-        private static Random random = new Random();
+        private static readonly Random random = new Random();
 
         public void Login(string userName)
         {
@@ -48,7 +47,7 @@ namespace Services
                 }
                 catch (Exception ex)
                 {
-                    IAddServiceCallback callback = null;
+                    IAddServiceCallback callback;
                     callbacks.TryRemove(item.Key, out callback);
                     ExceptionLog.Instance.WriteLog(ex, LogType.BLL);
                 }
