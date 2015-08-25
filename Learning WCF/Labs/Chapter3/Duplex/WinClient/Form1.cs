@@ -19,13 +19,19 @@ namespace WinClient
     [CallbackBehavior(UseSynchronizationContext = false)]
     public partial class Form1 : Form, HelloIndigoContractCallback
     {
-        private HelloIndigoContractClient client = null;
+        private readonly HelloIndigoContractClient client;
+
         public Form1()
         {
             InitializeComponent();
-            StartPosition=FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterScreen;
             InstanceContext instanceContext = new InstanceContext(this);
             client = new HelloIndigoContractClient(instanceContext);
+            WSDualHttpBinding binding = client.Endpoint.Binding as WSDualHttpBinding;
+            if (binding != null)
+            {
+                binding.ClientBaseAddress = new Uri("http://localhost:8101");
+            }
         }
 
         private void cmdInvoke_Click(object sender, EventArgs e)
