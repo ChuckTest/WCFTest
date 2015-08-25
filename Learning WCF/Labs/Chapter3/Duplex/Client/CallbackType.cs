@@ -10,7 +10,7 @@ namespace Client
     {
         public void HelloIndigoCallback(string message)
         {
-            Console.WriteLine("HelloIndigoCallback on thread {0}",Thread.CurrentThread.GetHashCode());
+            Console.WriteLine("Message returned back from server：{0}{2}Callback occurred on thred {1}", message, Thread.CurrentThread.ManagedThreadId, Environment.NewLine);
         }
     }
 }

@@ -17,17 +17,19 @@ namespace Client
         {
             try
             {
-                Console.WriteLine("HelloIndigoCallback on thread {0}", Thread.CurrentThread.GetHashCode());
-                Console.WriteLine();
 
                 CallbackType callbackType = new CallbackType();
                 InstanceContext instanceContext = new InstanceContext(callbackType);
 
                 HelloIndigoContractClient client = new HelloIndigoContractClient(instanceContext);
 
-                Console.WriteLine("Calling HelloIndigo()");
-                client.HelloIndigo("Hello from Client.");
-                Console.WriteLine("Returned from HelloIndigo()");
+                const string message = "Hello world!";
+                Console.WriteLine("Send message \"{0}\" to server.", message);
+                Console.WriteLine("Client started on thread {0}", Thread.CurrentThread.GetHashCode());
+                Console.WriteLine();
+
+                client.HelloIndigo(message);
+
             }
             catch (Exception ex)
             {
