@@ -81,7 +81,7 @@ namespace WinClient
             // Form1
             // 
             this.AutoScaleDimensions = new SizeF(6F, 12F);
-            this.AutoScaleMode = AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new Size(730, 448);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxResult);
