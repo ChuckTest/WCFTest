@@ -85,6 +85,7 @@ namespace WinClient
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(100, 21);
             this.textBoxUserName.TabIndex = 4;
+            this.textBoxUserName.Text = "ChuckLu";
             // 
             // Form1
             // 

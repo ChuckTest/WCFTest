@@ -45,7 +45,6 @@ namespace WinClient
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            ButtonStatus(false);
             InstanceContext instanceContext = new InstanceContext(new CallbackHandler());
             var channelFactory = new DuplexChannelFactory<IAddService>(instanceContext, "AddService_Binding");
             channel = channelFactory.CreateChannel();
@@ -53,10 +52,11 @@ namespace WinClient
             string userName = textBoxUserName.Text.Trim();
             if (userName.Equals(string.Empty))
             {
-                MessageBox.Show(@"用户名不允许重复");
+                MessageBox.Show(@"用户名不允许为空");
             }
             else
             {
+                ButtonStatus(false);
                 channel.Login(userName);
             }
         }
@@ -79,9 +79,10 @@ namespace WinClient
 
         private void CloseChannel()
         {
-            if (channel != null)
+            IClientChannel tempChannel = channel as IClientChannel;
+            if (tempChannel != null)
             {
-                ((IClientChannel)channel).Close();
+                tempChannel.Close();
             }
         }
     }

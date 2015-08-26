@@ -21,7 +21,19 @@ namespace Services
         public void Login(string userName)
         {
             IAddServiceCallback callback = OperationContext.Current.GetCallbackChannel<IAddServiceCallback>();
-            callbacks.AddOrUpdate(userName, callback, (key, value) => value);
+            string sessionId = OperationContext.Current.SessionId;
+            string message = string.Empty;
+            if (sessionId != null)
+            {
+                callbacks.AddOrUpdate(sessionId, callback, (key, value) => value);
+                message = string.Format("客户端会话编号:{0}", sessionId);
+            }
+            else
+            {
+                message = "OperationContext.Current.SessionId == null";
+            }
+            OperationLog.Instance.WriteLog(message, LogType.BLL);
+            
             Start();
         }
 
