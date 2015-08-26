@@ -45,9 +45,7 @@ namespace WinClient
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            InstanceContext instanceContext = new InstanceContext(new CallbackHandler());
-            var channelFactory = new DuplexChannelFactory<IAddService>(instanceContext, "AddService_Binding");
-            channel = channelFactory.CreateChannel();
+            CreateChannelWsDualHttpBinding();
 
             string userName = textBoxUserName.Text.Trim();
             if (userName.Equals(string.Empty))
@@ -59,6 +57,13 @@ namespace WinClient
                 ButtonStatus(false);
                 channel.Login(userName);
             }
+        }
+
+        private void CreateChannelWsDualHttpBinding()
+        {
+            InstanceContext instanceContext = new InstanceContext(new CallbackHandler());
+            var channelFactory = new DuplexChannelFactory<IAddService>(instanceContext, "AddService_Binding");
+            channel = channelFactory.CreateChannel();   
         }
 
         private void buttonStop_Click(object sender, EventArgs e)
