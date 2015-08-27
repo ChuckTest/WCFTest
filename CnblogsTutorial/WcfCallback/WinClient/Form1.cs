@@ -45,7 +45,7 @@ namespace WinClient
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            CreateChannelWsDualHttpBinding();
+            CreateChannel();
 
             string userName = textBoxUserName.Text.Trim();
             if (userName.Equals(string.Empty))
@@ -59,11 +59,30 @@ namespace WinClient
             }
         }
 
+        private void CreateChannel()
+        {
+            if (radioButtonWsDualHttpBinding.Checked)
+            {
+                CreateChannelWsDualHttpBinding();
+            }
+            else if(radioButtonNetTcpBinding.Checked)
+            {
+                CreateChannelNetTcpBinding();
+            }
+        }
+
         private void CreateChannelWsDualHttpBinding()
         {
             InstanceContext instanceContext = new InstanceContext(new CallbackHandler());
-            var channelFactory = new DuplexChannelFactory<IAddService>(instanceContext, "AddService_Binding");
+            var channelFactory = new DuplexChannelFactory<IAddService>(instanceContext, "AddService_wsDualHttpBinding");
             channel = channelFactory.CreateChannel();   
+        }
+
+        private void CreateChannelNetTcpBinding()
+        {
+            InstanceContext instanceContext = new InstanceContext(new CallbackHandler());
+            var channelFactory = new DuplexChannelFactory<IAddService>(instanceContext, "AddService_netTcpBinding");
+            channel = channelFactory.CreateChannel();
         }
 
         private void buttonStop_Click(object sender, EventArgs e)
