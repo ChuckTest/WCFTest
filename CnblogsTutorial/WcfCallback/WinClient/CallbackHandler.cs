@@ -7,9 +7,9 @@ namespace WinClient
     [CallbackBehavior(UseSynchronizationContext = false)]
     public class CallbackHandler : IAddServiceCallback
     {
-        public void ReturnValue(List<float> list )
+        public void ReturnValue(ReturnData returnData)
         {
-            EventManager.Instance.OnDataArrived(new DataArrivedEventArgs(){List = list});
+            EventManager.Instance.OnDataArrived(new DataArrivedEventArgs() {ReturnData = returnData});
         }
     }
 }

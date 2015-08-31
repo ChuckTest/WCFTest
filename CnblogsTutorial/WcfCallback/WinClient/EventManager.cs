@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ServiceContracts;
 
 namespace WinClient
 {
@@ -30,6 +31,6 @@ namespace WinClient
 
     public class DataArrivedEventArgs : EventArgs
     {
-        public List<float> List;
+        public ReturnData ReturnData { get; set; }
     }
 }

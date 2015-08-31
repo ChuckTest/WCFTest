@@ -21,6 +21,7 @@ namespace WinClient
         {
             buttonStart.Enabled = start;
             buttonStop.Enabled = !start;
+            groupBoxProtocol.Enabled = start;
         }
 
         private void Instance_DataArrived(object sender, DataArrivedEventArgs e)
@@ -30,8 +31,8 @@ namespace WinClient
                 Console.WriteLine(@"{0}:数据接收", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
                 textBoxResult.Invoke((MethodInvoker) delegate
                 {
-                    textBoxResult.AppendText(string.Join(",", e.List));
-                    textBoxResult.AppendText(Environment.NewLine + Environment.NewLine);
+                    string message = string.Format("{0}{1}{2}{1}{1}", e.ReturnData.DateTime.ToString("yyyy-MM-dd HH:mm:ss.fff"), Environment.NewLine, string.Join(",", e.ReturnData.DataList)); 
+                    textBoxResult.AppendText(message);
                 });
             }
             catch (Exception ex)
