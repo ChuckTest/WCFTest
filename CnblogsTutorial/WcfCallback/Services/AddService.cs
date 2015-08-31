@@ -16,6 +16,7 @@ namespace Services
             new ConcurrentDictionary<string, IAddServiceCallback>();
 
         private static Timer timer;
+        private static Random random = new Random();
 
         public void Login(string userName)
         {
@@ -49,12 +50,12 @@ namespace Services
         private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             DateTime dateTime = DateTime.Now;
-            List<float> list = Enumerable.Range(1, 100).Select(x => (float)x).ToList();
+            int start = random.Next(200);
+            List<float> list = Enumerable.Range(start, 100).Select(x => (float)x).ToList();
             foreach (KeyValuePair<string, IAddServiceCallback> item in callbacks)
             {
                 try
                 {
-
                     item.Value.ReturnValue(new ReturnData() {DataList = list, DateTime = dateTime});
                 }
                 catch (Exception ex)
