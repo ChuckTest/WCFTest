@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace WinClient
@@ -14,6 +8,18 @@ namespace WinClient
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void buttonDuplex_Click(object sender, EventArgs e)
+        {
+            FormDuplex formDuplex = new FormDuplex();
+            formDuplex.ShowDialog();
+        }
+
+        private void buttonProcess_Click(object sender, EventArgs e)
+        {
+            FormProcess formProcess=new FormProcess();
+            formProcess.ShowDialog();
         }
     }
 }
