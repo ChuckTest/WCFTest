@@ -55,16 +55,16 @@
     <Compile Include="AddServiceClient.cs" />
     <Compile Include="CallbackHandler.cs" />
     <Compile Include="EventManager.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDuplex.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDuplex.Designer.cs">
+      <DependentUpon>FormDuplex.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormDuplex.resx">
+      <DependentUpon>FormDuplex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

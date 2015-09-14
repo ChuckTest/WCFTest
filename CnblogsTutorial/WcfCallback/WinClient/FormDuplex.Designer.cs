@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace WinClient
 {
-    partial class Form1
+    partial class FormDuplex
     {
         /// <summary>
         /// 必需的设计器变量。

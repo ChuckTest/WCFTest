@@ -5,11 +5,11 @@ using ServiceContracts;
 
 namespace WinClient
 {
-    public partial class Form1 : Form
+    public partial class FormDuplex : Form
     {
         private IAddService channel;
 
-        public Form1()
+        public FormDuplex()
         {
             InitializeComponent();
             FormClosed += Form1_FormClosed;
