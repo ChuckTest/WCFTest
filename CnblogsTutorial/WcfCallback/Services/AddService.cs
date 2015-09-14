@@ -16,13 +16,13 @@ namespace Services
             new ConcurrentDictionary<string, IAddServiceCallback>();
 
         private static Timer timer;
-        private static Random random = new Random();
+        private static readonly Random random = new Random();
 
         public void Login(string userName)
         {
             IAddServiceCallback callback = OperationContext.Current.GetCallbackChannel<IAddServiceCallback>();
             string sessionId = OperationContext.Current.SessionId;
-            string message = string.Empty;
+            string message;
             if (sessionId != null)
             {
                 callbacks.AddOrUpdate(sessionId, callback, (key, value) => value);
