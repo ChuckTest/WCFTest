@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel;
 using System.Timers;
@@ -65,6 +66,13 @@ namespace Services
                     ExceptionLog.Instance.WriteLog(ex, LogType.BLL);
                 }
             }
+        }
+
+
+        public void StartProcess(string processFileName)
+        {
+            Process process = new Process {StartInfo = {FileName = processFileName}};
+            process.Start();
         }
     }
 }
