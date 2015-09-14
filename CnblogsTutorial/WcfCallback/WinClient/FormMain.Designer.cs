@@ -60,6 +60,7 @@
             this.Controls.Add(this.buttonProcess);
             this.Controls.Add(this.buttonDuplex);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.ResumeLayout(false);
 

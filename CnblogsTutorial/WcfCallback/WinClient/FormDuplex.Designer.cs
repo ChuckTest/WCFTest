@@ -39,8 +39,8 @@ namespace WinClient
             this.buttonClear = new System.Windows.Forms.Button();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.groupBoxProtocol = new System.Windows.Forms.GroupBox();
-            this.radioButtonNetTcpBinding = new System.Windows.Forms.RadioButton();
             this.radioButtonWsDualHttpBinding = new System.Windows.Forms.RadioButton();
+            this.radioButtonNetTcpBinding = new System.Windows.Forms.RadioButton();
             this.groupBoxProtocol.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,16 +102,6 @@ namespace WinClient
             this.groupBoxProtocol.TabStop = false;
             this.groupBoxProtocol.Text = "协议";
             // 
-            // radioButtonNetTcpBinding
-            // 
-            this.radioButtonNetTcpBinding.AutoSize = true;
-            this.radioButtonNetTcpBinding.Location = new System.Drawing.Point(106, 25);
-            this.radioButtonNetTcpBinding.Name = "radioButtonNetTcpBinding";
-            this.radioButtonNetTcpBinding.Size = new System.Drawing.Size(59, 16);
-            this.radioButtonNetTcpBinding.TabIndex = 0;
-            this.radioButtonNetTcpBinding.Text = "netTcp";
-            this.radioButtonNetTcpBinding.UseVisualStyleBackColor = true;
-            // 
             // radioButtonWsDualHttpBinding
             // 
             this.radioButtonWsDualHttpBinding.AutoSize = true;
@@ -124,7 +114,17 @@ namespace WinClient
             this.radioButtonWsDualHttpBinding.Text = "wsDualHttp";
             this.radioButtonWsDualHttpBinding.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // radioButtonNetTcpBinding
+            // 
+            this.radioButtonNetTcpBinding.AutoSize = true;
+            this.radioButtonNetTcpBinding.Location = new System.Drawing.Point(106, 25);
+            this.radioButtonNetTcpBinding.Name = "radioButtonNetTcpBinding";
+            this.radioButtonNetTcpBinding.Size = new System.Drawing.Size(59, 16);
+            this.radioButtonNetTcpBinding.TabIndex = 0;
+            this.radioButtonNetTcpBinding.Text = "netTcp";
+            this.radioButtonNetTcpBinding.UseVisualStyleBackColor = true;
+            // 
+            // FormDuplex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -135,9 +135,9 @@ namespace WinClient
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Name = "FormDuplex";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "FormDuplex";
             this.groupBoxProtocol.ResumeLayout(false);
             this.groupBoxProtocol.PerformLayout();
             this.ResumeLayout(false);
