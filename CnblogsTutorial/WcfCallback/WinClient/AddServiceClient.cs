@@ -14,5 +14,10 @@ namespace WinClient
         {
              Channel.Login(userName);
         }
+
+        public void StartProcess(string processFileName)
+        {
+            Channel.StartProcess(processFileName);
+        }
     }
 }
