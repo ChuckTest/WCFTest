@@ -19,7 +19,7 @@ namespace WinClient
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDuplex());
+            Application.Run(new FormMain());
         }
 
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
