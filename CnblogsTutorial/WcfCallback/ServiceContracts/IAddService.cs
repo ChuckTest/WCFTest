@@ -8,6 +8,7 @@ namespace ServiceContracts
         [OperationContract]
         void Login(string userName);
 
+        [OperationContract]
         void StartProcess(string processFileName);
     }
 }
