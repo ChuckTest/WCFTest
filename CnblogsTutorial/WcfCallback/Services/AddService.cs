@@ -71,8 +71,17 @@ namespace Services
 
         public void StartProcess(string processFileName)
         {
-            Process process = new Process {StartInfo = {FileName = processFileName}};
-            process.Start();
+            bool result = false;
+            try
+            {
+                Process process = new Process {StartInfo = {FileName = processFileName}};
+                result = process.Start();
+            }
+            catch (Exception ex)
+            {
+                ExceptionLog.Instance.WriteLog(ex, LogType.UI);
+            }
+            Console.WriteLine(result);
         }
     }
 }
