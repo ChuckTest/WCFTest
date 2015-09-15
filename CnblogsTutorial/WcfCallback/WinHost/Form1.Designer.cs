@@ -41,21 +41,25 @@
             this.buttonStart.TabIndex = 0;
             this.buttonStart.Text = "启动服务";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonStop
             // 
+            this.buttonStop.Enabled = false;
             this.buttonStop.Location = new System.Drawing.Point(381, 26);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(91, 47);
             this.buttonStop.TabIndex = 1;
             this.buttonStop.Text = "停止服务";
             this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // textBoxLog
             // 
             this.textBoxLog.Location = new System.Drawing.Point(43, 94);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
+            this.textBoxLog.ReadOnly = true;
             this.textBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxLog.Size = new System.Drawing.Size(429, 380);
             this.textBoxLog.TabIndex = 2;
