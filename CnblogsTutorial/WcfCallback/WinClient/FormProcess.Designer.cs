@@ -52,6 +52,7 @@
             // 
             this.textBoxFileName.Location = new System.Drawing.Point(120, 49);
             this.textBoxFileName.Name = "textBoxFileName";
+            this.textBoxFileName.ReadOnly = true;
             this.textBoxFileName.Size = new System.Drawing.Size(374, 21);
             this.textBoxFileName.TabIndex = 1;
             // 
@@ -63,6 +64,7 @@
             this.buttonBrower.TabIndex = 2;
             this.buttonBrower.Text = "浏览";
             this.buttonBrower.UseVisualStyleBackColor = true;
+            this.buttonBrower.Click += new System.EventHandler(this.buttonBrower_Click);
             // 
             // buttonStartProcess
             // 
@@ -72,6 +74,7 @@
             this.buttonStartProcess.TabIndex = 3;
             this.buttonStartProcess.Text = "启动";
             this.buttonStartProcess.UseVisualStyleBackColor = true;
+            this.buttonStartProcess.Click += new System.EventHandler(this.buttonStartProcess_Click);
             // 
             // FormProcess
             // 

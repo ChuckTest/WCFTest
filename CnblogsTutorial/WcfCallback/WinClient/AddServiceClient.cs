@@ -12,7 +12,7 @@ namespace WinClient
 
         public void Login(string userName)
         {
-             Channel.Login(userName);
+            Channel.Login(userName);
         }
 
         public void StartProcess(string processFileName)
