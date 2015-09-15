@@ -24,11 +24,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost:8001", "ht
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceContracts", "..\..\..\..\..\SourceCode\GitHub\WCFTest\CnblogsTutorial\WcfCallback\ServiceContracts\ServiceContracts.csproj", "{67DB6B31-A5F4-411E-B0F2-BEA46BB1D5F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceContracts", "ServiceContracts\ServiceContracts.csproj", "{67DB6B31-A5F4-411E-B0F2-BEA46BB1D5F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\..\..\..\..\SourceCode\GitHub\WCFTest\CnblogsTutorial\WcfCallback\Services\Services.csproj", "{92E598BA-32C3-4838-BD19-4A0F46B0A4FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{92E598BA-32C3-4838-BD19-4A0F46B0A4FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinClient", "..\..\..\..\..\SourceCode\GitHub\WCFTest\CnblogsTutorial\WcfCallback\WinClient\WinClient.csproj", "{5801DF84-67B5-4DD7-BC11-4D24EC10E617}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinClient", "WinClient\WinClient.csproj", "{5801DF84-67B5-4DD7-BC11-4D24EC10E617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinHost", "WinHost\WinHost.csproj", "{10EDEDEB-E1D7-4FA8-AB68-2F47CB07629E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{5801DF84-67B5-4DD7-BC11-4D24EC10E617}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5801DF84-67B5-4DD7-BC11-4D24EC10E617}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5801DF84-67B5-4DD7-BC11-4D24EC10E617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10EDEDEB-E1D7-4FA8-AB68-2F47CB07629E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10EDEDEB-E1D7-4FA8-AB68-2F47CB07629E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10EDEDEB-E1D7-4FA8-AB68-2F47CB07629E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10EDEDEB-E1D7-4FA8-AB68-2F47CB07629E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
